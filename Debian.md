@@ -36,6 +36,8 @@ apt-get install -y ignition
 apt-get install -y dracut dracut-network
 apt-get install -y selinux-basics selinux-policy-default --no-install-recommends
 
+echo '%sudo       ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers.d/nopw
+
 sed -i '/^RemainAfterExit=.*/a Environment="IGNITION_WRITE_AUTHORIZED_KEYS_FRAGMENT=false"' /usr/lib/dracut/modules.d/30ignition/ignition-files.service
 
 for kernel in /boot/vmlinuz-*; do
