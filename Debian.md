@@ -84,7 +84,7 @@ EOF
 systemctl enable firstboot.service
 ```
 
-## create OCI image
+## Create OCI image
 ```
 oras login -u xxxx -p xxxx ghcr.io
 
@@ -96,7 +96,7 @@ debian-12-genericcloud-amd64.raw:application/vnd.onmetal.image.rootfs.v1alpha1.r
 --config debian-12-genericcloud-amd64.config:application/vnd.onmetal.image.config.v1alpha1+json
 ```
 
-## unmount image
+## Unmount image
 ```
 umount /mnt
 losetup -d /dev/loop0
