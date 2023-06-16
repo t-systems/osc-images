@@ -91,7 +91,7 @@ systemctl enable firstboot.service
 oras login -u xxxx -p xxxx ghcr.io
 
 echo '{"commandLine":"root=LABEL=ROOT ro console=tty0 console=ttyS0,115200 earlyprintk=ttyS0,115200 consoleblank=0 cgroup_enable=memory swapaccount=1 ignition.firstboot=1 ignition.platform.id=qemu security=selinux"}' > debian-12-genericcloud-amd64.config
-oras push ghcr.io/t-systems/osc-images/debian:12-genericcloud-amd64-2 \
+oras push ghcr.io/t-systems/osc-images/debian:12-genericcloud-amd64 \
 debian-12-genericcloud-amd64.raw:application/vnd.onmetal.image.rootfs.v1alpha1.rootfs \
 /mnt/boot/vmlinuz-6.1.0-9-cloud-amd64:application/vnd.onmetal.image.vmlinuz.v1alpha1.vmlinuz \
 /mnt/boot/initrd.img-6.1.0-9-cloud-amd64:application/vnd.onmetal.image.initramfs.v1alpha1.initramfs \
